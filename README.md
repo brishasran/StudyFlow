@@ -9,6 +9,8 @@ StudyFlow is a student-focused planning app designed to help manage academic wor
 - Weekly calendar view
 - Built-in focus reset tool
 
+ The app opens with sample academic tasks so users can immediately test the smart suggestion, workload scoring, and calendar features.
+
 ## Tech
 - HTML
 - CSS
