@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyFlow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">student workload planner</p>
+      <h1>StudyFlow</h1>
+      <p class="subtitle">
+        A calming planner that helps students track deadlines, understand workload, and choose what to start next.
+      </p>
+    </div>
+
+    <button class="primary-btn">+ Add Task</button>
+  </header>
+
+  <div class="modal hidden">
+    <div class="modal-card">
+      <button class="close-btn">×</button>
+      <p class="eyebrow">new task</p>
+      <h2>Add to StudyFlow</h2>
+
+      <input id="taskName" type="text" placeholder="Task name" />
+
+      <select id="taskType">
+        <option value="assignment">Assignment</option>
+        <option value="quiz">Quiz</option>
+        <option value="midterm">Midterm</option>
+        <option value="lab">Lab</option>
+        <option value="final">Final Prep</option>
+      </select>
+
+      <select id="taskDifficulty">
+        <option value="low">Light</option>
+        <option value="medium">Medium</option>
+        <option value="high">Heavy</option>
+      </select>
+
+      <input id="taskDue" type="text" placeholder="Due date, ex. Apr 30" />
+
+      <button class="save-task-btn">Add Task</button>
+    </div>
+  </div>
+
+  <section class="insight-card">
+    <div>
+      <p class="eyebrow">smart suggestion</p>
+      <h2>Start with Calculus Midterm Prep</h2>
+      <p>
+        It has the highest stress score today because it is due soon, high effort, and exam-based.
+      </p>
+    </div>
+
+    <div class="score-circle">
+      <span>92</span>
+      <p>stress score</p>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span>Due This Week</span>
+      <strong>7</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>High Effort</span>
+      <strong>3</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Completed</span>
+      <strong>12</strong>
+    </div>
+
+    <div class="stat-card">
+      <span>Overload Days</span>
+      <strong>2</strong>
+    </div>
+  </section>
+
+  <main class="dashboard">
+    <section class="board">
+
+      <div class="column">
+        <h2>To Do</h2>
+
+        <article class="task high">
+          <span class="tag assignment">Assignment</span>
+          <h3>Physics problem set</h3>
+          <p>Finish questions 12–20 and check units before submitting.</p>
+
+          <div class="task-meta">
+            <span>Due Apr 25</span>
+            <span>Est. 3 hrs</span>
+          </div>
+
+          <div class="action-row">
+            <button class="action-btn move-progress">In Progress</button>
+            <button class="action-btn move-done">Done</button>
+            <button class="action-btn delete">Delete</button>
+          </div>
+        </article>
+
+        <article class="task medium">
+          <span class="tag quiz">Quiz</span>
+          <h3>Psych review quiz</h3>
+          <p>Review lecture notes and complete practice questions.</p>
+
+          <div class="task-meta">
+            <span>Due Apr 27</span>
+            <span>Est. 1 hr</span>
+          </div>
+
+          <div class="action-row">
+            <button class="action-btn move-progress">In Progress</button>
+            <button class="action-btn move-done">Done</button>
+            <button class="action-btn delete">Delete</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="column">
+        <h2>In Progress</h2>
+
+        <article class="task high">
+          <span class="tag midterm">Midterm</span>
+          <h3>Calculus midterm prep</h3>
+          <p>Redo missed homework problems and review integration methods.</p>
+
+          <div class="task-meta">
+            <span>Exam Apr 29</span>
+            <span>Est. 6 hrs</span>
+          </div>
+
+          <div class="action-row">
+            <button class="action-btn move-progress">In Progress</button>
+            <button class="action-btn move-done">Done</button>
+            <button class="action-btn delete">Delete</button>
+          </div>
+        </article>
+
+        <article class="task medium">
+          <span class="tag lab">Lab</span>
+          <h3>Chemistry lab report</h3>
+          <p>Finish results section and clean up graphs.</p>
+
+          <div class="task-meta">
+            <span>Due Apr 26</span>
+            <span>Est. 2 hrs</span>
+          </div>
+
+          <div class="action-row">
+            <button class="action-btn move-progress">In Progress</button>
+            <button class="action-btn move-done">Done</button>
+            <button class="action-btn delete">Delete</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="column">
+        <h2>Done</h2>
+
+        <article class="task done">
+          <span class="tag final">Final Prep</span>
+          <h3>Formula sheet draft</h3>
+          <p>Organized constants, equations, and quick reminders.</p>
+
+          <div class="task-meta">
+            <span>Completed</span>
+            <span>✓</span>
+          </div>
+
+          <div class="action-row">
+            <button class="action-btn move-progress">In Progress</button>
+            <button class="action-btn move-done">Done</button>
+            <button class="action-btn delete">Delete</button>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <aside class="side-panel">
+
+      <!-- SMART ESTIMATE FIRST -->
+      <section class="estimate-card">
+        <p class="eyebrow">smart estimate prototype</p>
+        <h2>Task difficulty estimate</h2>
+
+        <div class="estimate-row">
+          <span>Type</span>
+          <strong>Midterm</strong>
+        </div>
+
+        <div class="estimate-row">
+          <span>Difficulty</span>
+          <strong>Hard</strong>
+        </div>
+
+        <div class="estimate-row">
+          <span>Suggested plan</span>
+          <strong>3 sessions</strong>
+        </div>
+
+        <p class="note">
+          StudyFlow estimates workload using task type, urgency, and difficulty so students know what to start first.
+        </p>
+      </section>
+
+      <!-- CALENDAR -->
+      <section class="calendar-card">
+        <div class="section-title">
+          <h2 id="month-title">April</h2>
+          <span>Week view</span>
+        </div>
+
+        <div class="week">
+          <div class="day calm">
+            <span>23</span>
+            <p>😌 light</p>
+          </div>
+
+          <div class="day busy">
+            <span>24</span>
+            <p>😐 busy</p>
+          </div>
+
+          <div class="day heavy">
+            <span>25</span>
+            <p>😵‍💫 heavy</p>
+          </div>
+
+          <div class="day heavy">
+            <span>26</span>
+            <p>😵‍💫 heavy</p>
+          </div>
+
+          <div class="day calm">
+            <span>27</span>
+            <p>😌 light</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESET -->
+      <section class="reset-card">
+        <p class="eyebrow">focus reset</p>
+        <h2>Overloaded?</h2>
+        <p>Take a 2-minute reset before choosing your next task.</p>
+
+        <div class="bubble">✦</div>
+
+        <button class="secondary-btn">Start reset</button>
+      </section>
+
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
